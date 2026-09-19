@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rey Gufron – Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS Eksternal -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     WELCOME SCREEN
+════════════════════════════════════════ -->
+<div id="welcome-screen">
+
+  <!-- konten tengah -->
+  <div class="wl-center">
+
+    <!-- lingkaran dekorasi -->
+    <div class="wl-ring wl-ring-1"></div>
+    <div class="wl-ring wl-ring-2"></div>
+    <div class="wl-ring wl-ring-3"></div>
+
+    <!-- teks selamat datang -->
+    <div class="wl-welcome-text">Selamat Datang</div>
+    <div class="wl-sub">Rey Gufron</div>
+
+    <!-- nama -->
+    <div class="wl-name">Di<span>Portofolio</span></div>
+
+    <!-- profesi -->
+    <div class="wl-role">Web Developer &amp; UI Designer</div>
+
+    <!-- progress bar -->
+    <div class="wl-bar-wrap">
+      <div class="wl-bar" id="wlBar"></div>
+    </div>
+    <div class="wl-loading-text" id="wlLoadText">Memuat...</div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#home" class="logo">Rey<span>Gufron</span></a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HOME
+════════════════════════════════════════ -->
+<section id="home">
+
+  <div class="home-text fade-up">
+    <div class="home-badge"><span id="typing-text">Web Developer</span><span class="typing-cursor"></span></div>
+    <h1>Halo, saya<br><span class="highlight">Rey Gufron</span></h1>
+    <p>Mempelajari dan mengembangkan kemampuan di bidang Web Development dan UI/UX Design dengan fokus pada pembuatan website yang modern, sederhana, dan mudah digunakan.</p>
+
+    <div class="btn-row">
+      <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+      <a href="#projects" class="btn btn-outline">Lihat Proyek</a>
+      <a href="CV_Rey Gufron.pdf" download class="btn btn-cv">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+
+  <div class="home-photo-wrap fade-up" style="transition-delay:.15s">
+    <div class="home-photo-ring">
+      <!-- Ganti dengan foto kamu: hapus komentar di bawah dan hapus div placeholder -->
+      <!-- <img src="foto.jpg" alt="Rey Gufron"> -->
+      <img src="fotocv1.png" alt="Rey Gufron">
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-header fade-up">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="section-underline"><span></span></div>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="card fade-up" onclick="openModal('modal-diri')" style="cursor:pointer">
+      <div class="card-icon"><i class="fas fa-user"></i></div>
+      <h3>Tentang Diri</h3>
+      <p>Saya adalah seorang web developer dan UI designer dengan passion dalam menciptakan pengalaman digital yang menarik dan fungsional. Saya selalu bersemangat untuk belajar teknologi baru dan meningkatkan keterampilan saya.</p>
+      <div class="card-readmore">Lihat Detail <i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <div class="card fade-up" style="transition-delay:.1s; cursor:pointer" onclick="openModal('modal-pendidikan')">
+      <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Pendidikan</h3>
+      <div class="edu-name">SMK Prestasi Prima Jakarta</div>
+      <div class="edu-major">Rekayasa Perangkat Lunak &amp; Gim</div>
+      <div class="edu-year">2024 – Sekarang</div>
+      <div class="card-readmore">Lihat Detail <i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <div class="card fade-up" style="transition-delay:.2s; cursor:pointer" onclick="openModal('modal-karier')">
+      <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+      <h3>Tujuan Karier</h3>
+      <p>Menjadi Full Stack Developer yang handal dan berkontribusi dalam proyek-proyek yang berdampak positif bagi masyarakat. Saya ingin terus berkembang dalam bidang web development dan UI/UX design.</p>
+      <div class="card-readmore">Lihat Detail <i class="fas fa-arrow-right"></i></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODALS ABOUT
+════════════════════════════════════════ -->
+
+<!-- Modal: Tentang Diri -->
+<div class="modal-overlay" id="modal-diri" onclick="closeModal(this)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal(document.getElementById('modal-diri'))"><i class="fas fa-times"></i></button>
+    <div class="modal-icon"><i class="fas fa-user"></i></div>
+    <h2>Tentang Diri</h2>
+    <div class="modal-divider"></div>
+    <p>Saya adalah seorang <strong>Web Developer & UI Designer</strong> yang memiliki passion dalam menciptakan pengalaman digital yang menarik dan fungsional.</p>
+    <p>Saya memiliki kemampuan dalam membangun aplikasi web dari sisi frontend maupun backend, dengan fokus pada desain yang berpusat pada pengguna (user-centered design).</p>
+    <p>Saya selalu bersemangat untuk terus belajar teknologi baru, mengikuti perkembangan industri, dan meningkatkan keterampilan saya setiap hari.</p>
+    <div class="modal-tags">
+      <span>Problem Solver</span>
+      <span>Fast Learner</span>
+      <span>Team Player</span>
+      <span>Detail-Oriented</span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Pendidikan -->
+<div class="modal-overlay" id="modal-pendidikan" onclick="closeModal(this)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal(document.getElementById('modal-pendidikan'))"><i class="fas fa-times"></i></button>
+    <div class="modal-icon"><i class="fas fa-graduation-cap"></i></div>
+    <h2>Pendidikan</h2>
+    <div class="modal-divider"></div>
+
+    <div class="modal-edu-item">
+      <div class="modal-edu-icon"><i class="fas fa-university"></i></div>
+      <div>
+        <div class="modal-edu-name">SMK Prestasi Prima Jakarta</div>
+        <div class="modal-edu-major">Rekayasa Perangkat Lunak &amp; Gim</div>
+        <div class="modal-edu-year">2024 – Sekarang</div>
+      </div>
+    </div>
+
+    <div class="modal-edu-detail">
+      <div class="modal-edu-phase">
+        <span class="modal-phase-label">Kelas 10</span>
+        <p>Saya juga memiliki kemampuan komunikasi yang baik, mudah beradaptasi, bertanggung jawab, serta siap berkembang di lingkungan kerja profesional.</p>
+      </div>
+      <div class="modal-edu-phase">
+        <span class="modal-phase-label">Kelas 11</span>
+        <p>Mengembangkan proyek website Sistem Informasi Pengaduan dan Aspirasi Masyarakat dengan menggunakan HTML, CSS, JavaScript, dan Laravel dasar. Bertanggung jawab dalam pembuatan tampilan website, pengelolaan data sederhana, serta penyusunan desain antarmuka yang modern dan mudah digunakan.</p>
+      </div>
+    </div>
+
+    <div class="modal-tags">
+      <span>RPL &amp; Gim</span>
+      <span>SMK Prestasi Prima</span>
+      <span>2024 – Sekarang</span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Tujuan Karier -->
+<div class="modal-overlay" id="modal-karier" onclick="closeModal(this)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal(document.getElementById('modal-karier'))"><i class="fas fa-times"></i></button>
+    <div class="modal-icon"><i class="fas fa-bullseye"></i></div>
+    <h2>Tujuan Karier</h2>
+    <div class="modal-divider"></div>
+    <p>Menjadi seorang <strong>Full Stack Developer</strong> yang handal dan profesional, mampu membangun solusi digital end-to-end yang berdampak positif bagi masyarakat.</p>
+    <p>Saya ingin terus berkembang dalam bidang <strong>Web Development</strong> dan <strong>UI/UX Design</strong>, serta berkontribusi dalam tim yang dinamis dan inovatif.</p>
+    <p>Dalam jangka panjang, saya bercita-cita untuk memimpin tim pengembangan dan membangun produk digital yang digunakan secara luas.</p>
+    <div class="modal-tags">
+      <span>Full Stack Developer</span>
+      <span>UI/UX Design</span>
+      <span>Tech Lead</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     SKILLS
+════════════════════════════════════════ -->
+<section id="skills">
+  <div class="section-header fade-up">
+    <div class="section-label">Tech Stack</div>
+    <h2 class="section-title">Keterampilan</h2>
+    <div class="section-underline"><span></span></div>
+    <p class="section-sub">Teknologi dan tools yang saya kuasai untuk mengembangkan solusi digital</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card fade-up">
+      <i class="fab fa-html5"></i><span>HTML</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fab fa-css3-alt"></i><span>CSS</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fab fa-js"></i><span>JavaScript</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fab fa-php"></i><span>PHP</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fab fa-laravel"></i><span>Laravel</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fas fa-database"></i><span>MySQL</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fas fa-file-excel"></i><span>Excel</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fas fa-file-word"></i><span>Word</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fas fa-palette"></i><span>Canva</span>
+    </div>
+    <div class="skill-card fade-up">
+      <i class="fab fa-git-alt"></i><span>Git</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════ -->
+<section id="projects">
+  <div class="section-header fade-up">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Proyek</h2>
+    <div class="section-underline"><span></span></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card fade-up">
+      <div class="project-img">
+        <img src="poster-laporan.jpg" alt="LaporAja">
+      </div>
+      <div class="project-body">
+        <h3>LaporAja!</h3>
+        <p>Sistem Informasi Pengaduan dan Aspirasi Masyarakat berbasis web yang memudahkan warga menyampaikan laporan kepada instansi pemerintah secara digital.</p>
+        <div class="tech-tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">PHP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-up" style="transition-delay:.1s">
+      <div class="project-img">
+        <img src="poster-limbahB3.png" alt="Limbah B3">
+      </div>
+      <div class="project-body">
+        <h3>Pengelolaan Limbah B3</h3>
+        <p>Website Pengelolaan Limbah B3 dengan sistem pencatatan, pelaporan, dan monitoring limbah berbahaya untuk mendukung kepatuhan lingkungan perusahaan.</p>
+        <div class="tech-tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-up" style="transition-delay:.2s">
+      <div class="project-img">
+        <img src="poster-kasir2.png" alt="TokoKu">
+      </div>
+      <div class="project-body">
+        <h3>TokoKu</h3>
+        <p>Aplikasi manajemen toko berbasis web untuk UMKM dengan fitur pencatatan produk, transaksi penjualan, laporan keuangan harian, dan manajemen stok barang.</p>
+        <div class="tech-tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Alpine.js</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CERTIFICATES
+════════════════════════════════════════ -->
+<section id="certificates">
+  <div class="section-header fade-up">
+    <div class="section-label">Achievements</div>
+    <h2 class="section-title">Sertifikat</h2>
+    <div class="section-underline"><span></span></div>
+    <p class="section-sub">Klik pada sertifikat untuk melihat lebih detail</p>
+  </div>
+
+  <div class="cert-grid">
+
+    <div class="cert-card fade-up">
+      <div class="cert-img">
+        <img src="sertifikat1.jpg" alt="Latihan Dasar Kepemimpinan Organisasi (LDKO)">
+        <span class="cert-badge">Pelatihan</span>
+      </div>
+      <div class="cert-body">
+        <h3>Latihan Dasar Kepemimpinan Organisasi (LDKO)</h3>
+        <div class="cert-issuer">SMK Prestasi Prima Jakarta</div>
+      </div>
+    </div>
+
+    <div class="cert-card fade-up" style="transition-delay:.1s">
+      <div class="cert-img">
+        <img src="sertifikat2.jpg" alt="Latihan Dasar Kepemimpinan Siswa (LDKS)">
+        <span class="cert-badge">Pelatihan</span>
+      </div>
+      <div class="cert-body">
+        <h3>Latihan Dasar Kepemimpinan Siswa (LDKS)</h3>
+        <div class="cert-issuer">SMK Prestasi Prima Jakarta</div>
+      </div>
+    </div>
+
+    <div class="cert-card fade-up" style="transition-delay:.2s">
+      <div class="cert-img">
+        <img src="APISertifikat.png" alt="Program Culture & Care Xpedition #1">
+        <span class="cert-badge">Seminar</span>
+      </div>
+      <div class="cert-body">
+        <h3>Program Culture & Care Xpedition #1</h3>
+        <div class="cert-issuer">Arah Pemuda Indonesia</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════ -->
+<section id="experience">
+  <div class="section-header fade-up">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">Pengalaman</h2>
+    <div class="section-underline"><span></span></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+      <div class="timeline-card">
+        <h3>Sistem Pengaduan Masyarakat Berbasis Website</h3>
+        <div class="timeline-org">Proyek Sekolah & Pembelajaran</div>
+        <div class="timeline-date">2026</div>
+        <p>Mengembangkan aplikasi Sistem Pengaduan Masyarakat berbasis web menggunakan Laravel sebagai bagian dari pembelajaran Rekayasa Perangkat Lunak. Bertanggung jawab dalam perancangan UI/UX menggunakan Figma, pembuatan landing page dan dashboard admin, pengelolaan database, serta pengembangan fitur untuk proses pengaduan dan manajemen data.</p>
+        <div class="tech-tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">PHP</span>
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">MySQL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up" style="transition-delay:.1s">
+      <div class="timeline-dot"><i class="fas fa-users"></i></div>
+      <div class="timeline-card">
+        <h3>Peserta LDKO (Latihan Dasar Kepemimpinan Organisasi)</h3>
+        <div class="timeline-org"> Kegiatan Organisasi</div>
+        <div class="timeline-date">2024</div>
+        <p>Mengikuti program Latihan Dasar Kepemimpinan Organisasi (LDKO) untuk mengembangkan kemampuan kepemimpinan, komunikasi, kerja sama tim, serta tanggung jawab dalam berorganisasi. Berpartisipasi aktif dalam berbagai kegiatan yang melatih kemampuan problem solving, pengambilan keputusan, dan kolaborasi dalam tim.</p>
+        <div class="tech-tags">
+          <span class="tag">Leadership</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up" style="transition-delay:.2s">
+      <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+      <div class="timeline-card">
+        <h3>Desain UI/UX & Prototype</h3>
+        <div class="timeline-org">Tugas Sekolah</div>
+        <div class="timeline-date">2025 – Sekarang</div>
+        <p>Membuat desain tampilan aplikasi dan website menggunakan Figma dengan fokus pada desain modern, sederhana, dan mudah digunakan. Membuat wireframe, prototype, dan desain landing page untuk kebutuhan project sekolah.</p>
+        <div class="tech-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Prototype Design</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="section-header fade-up">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Hubungi Saya</h2>
+    <div class="section-underline"><span></span></div>
+    <p class="contact-sub">Tertarik untuk berkolaborasi atau memiliki proyek? Jangan ragu untuk menghubungi saya melalui platform di bawah ini.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <a href="https://wa.me/6289655034871" target="_blank" class="contact-card fade-up">
+      <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="contact-label">WhatsApp</div>
+        <div class="contact-val">+62 896-5503-4871</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/reygfrn_" target="_blank" class="contact-card fade-up" style="transition-delay:.1s">
+      <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+      <div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-val">@reygfrn_</div>
+      </div>
+    </a>
+
+    <a href="mailto:raygufron@email.com" class="contact-card fade-up" style="transition-delay:.15s">
+      <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-val">raygufron@gmail.com</div>
+      </div>
+    </a>
+
+    <a href="https://tiktok.com/@uponggv" target="_blank" class="contact-card fade-up" style="transition-delay:.2s">
+      <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+      <div>
+        <div class="contact-label">TikTok</div>
+        <div class="contact-val">@uponggv</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+   <span>Rey Gufron</span>  . Portofolio Kerja </p>
+</footer>
+
+
+<!-- JS Eksternal — letakkan di bawah sebelum </body> -->
+<script src="script.js"></script>
+</body>
+</html>
